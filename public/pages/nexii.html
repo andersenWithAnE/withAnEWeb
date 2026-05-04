@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./brand_assets/isoE_lightBlue.svg">
+
+  <meta property="og:title" content="Nexii | With An E Creative" />
+  <meta property="og:description" content="Architectural visualizations that communicate structure and concepts for Nexii." />
+  <meta property="og:image" content="https://withanecreative.com/brand_assets/isoE_lightBlue.svg/">
+  <meta property="og:url" content="https://withanecreative.com/" />
+  <meta property="og:type" content="website" />
+  <title>Nexii | With An E Creative</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Century Gothic', 'Gill Sans', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      background: #022859;
+      color: rgba(179,220,255,0.82);
+      overflow-x: hidden;
+    }
+    :root {
+      --blue-light: #b3dcff;
+      --blue-mid:   #3e85f8;
+      --blue-navy:  #022859;
+      --blue-dark:  #011530;
+      --off-white:  #031e42;
+      --purple:     #813ae5;
+      --pink:       #fc1c6d;
+      --orange:     #f85a24;
+      --gold:       #fdbf3c;
+      --text-mid:   rgba(179,220,255,0.78);
+      --text-light: rgba(179,220,255,0.45);
+      --radius-sm:  8px;
+      --radius-md:  16px;
+      --radius-lg:  24px;
+      --radius-xl:  40px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --accent:     #2cc295;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; line-height: 1.15; letter-spacing: 0.01em;
+    }
+    p { font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif; line-height: 1.75; color: var(--text-mid); }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.7rem; letter-spacing: 0.22em;
+      color: var(--accent); margin-bottom: 16px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; display: block; width: 24px; height: 2px; background: var(--accent);
+    }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--blue-light); margin-bottom: 20px; }
+    .section-subtitle { font-size: 1rem; color: var(--text-mid); max-width: 560px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.78rem; letter-spacing: 0.12em;
+      padding: 14px 32px; border-radius: 50px; border: none; cursor: pointer;
+      text-decoration: none; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-primary { background: var(--accent); color: #011530; box-shadow: 0 4px 20px rgba(44,194,149,0.35); }
+    .btn-primary:hover { background: #25a87e; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(44,194,149,0.45); }
+    .btn svg { width: 18px; height: 18px; }
+    /* NAVBAR */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0; transition: var(--transition);
+      background: rgba(2,40,89,0.95);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .navbar.scrolled { padding: 12px 0; }
+    .navbar-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 44px; width: auto; transition: var(--transition); }
+    .navbar.scrolled .nav-logo img { height: 36px; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.72rem; letter-spacing: 0.14em;
+      color: var(--blue-light); text-decoration: none;
+      transition: var(--transition); opacity: 0.8;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--blue-mid) !important; }
+    .nav-links a.active { opacity: 1; color: var(--blue-mid); }
+    .nav-cta { font-size: 0.7rem !important; padding: 10px 24px !important; }
+    .nav-cta-btn { background: var(--blue-mid) !important; color: var(--blue-light) !important; box-shadow: 0 4px 20px rgba(62,133,248,0.35) !important; }
+    .nav-cta-btn:hover { background: #2a72e8 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--blue-light); border-radius: 2px; }
+    /* FOOTER */
+    .footer { background: var(--blue-dark); padding: 72px 0 32px; }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand img { height: 48px; margin-bottom: 20px; }
+    .footer-tagline { font-size: 0.85rem; color: rgba(179,220,255,0.45); line-height: 1.75; margin-bottom: 28px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(179,220,255,0.07); border: 1px solid rgba(179,220,255,0.1);
+      color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition);
+    }
+    .footer-social:hover { background: var(--blue-mid); color: var(--blue-light); border-color: var(--blue-mid); }
+    .footer-col-title {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.18em; color: var(--blue-light); margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.85rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--blue-light); }
+    .footer-bottom { border-top: 1px solid rgba(179,220,255,0.07); padding-top: 28px; }
+    .footer-copy { font-size: 0.8rem; color: rgba(179,220,255,0.25); }
+    /* PAGE HERO */
+    .page-hero {
+      position: relative; overflow: hidden;
+      min-height: 520px; display: flex; align-items: center;
+      background: linear-gradient(135deg, #1a0d00 0%, #3d1800 50%, #022859 100%);
+    }
+    .page-hero-bg { position: absolute; inset: 0; }
+    .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(1,21,48,0.38) 0%, rgba(2,40,89,0.62) 100%);
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      text-align: center; padding: 140px 0 80px;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .page-hero-content .section-title { color: #fff; }
+    .hero-service-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 20px; border-radius: 50px; margin-top: 16px;
+      background: rgba(44,194,149,0.18); border: 1px solid rgba(44,194,149,0.4);
+      font-size: 0.72rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--blue-light);
+    }
+    /* PROJECT SECTIONS */
+    .project-section { padding: 100px 0; background: var(--blue-navy); }
+    .project-section.alt { background: var(--off-white); }
+    .overview-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+    }
+    .overview-text p + p { margin-top: 20px; }
+    .project-info-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(179,220,255,0.1);
+      border-radius: var(--radius-lg); padding: 40px;
+    }
+    .project-info-row {
+      padding: 16px 0; border-bottom: 1px solid rgba(179,220,255,0.08);
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .project-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .project-info-label {
+      font-size: 0.65rem; font-weight: bold; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--accent);
+    }
+    .project-info-value { font-size: 0.95rem; color: var(--blue-light); }
+    .project-tags-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .project-tag-sm {
+      padding: 4px 12px; border-radius: 50px;
+      background: rgba(44,194,149,0.1); border: 1px solid rgba(44,194,149,0.25);
+      font-size: 0.72rem; color: var(--blue-light);
+    }
+    /* DELIVERABLES */
+    .deliverables-header { text-align: center; margin-bottom: 56px; }
+    .deliverables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .deliverable-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(179,220,255,0.1);
+      border-radius: var(--radius-lg); padding: 36px 28px;
+      transition: var(--transition);
+    }
+    .deliverable-card:hover { border-color: rgba(44,194,149,0.35); transform: translateY(-4px); }
+    .deliverable-icon {
+      width: 52px; height: 52px; border-radius: var(--radius-md);
+      background: rgba(44,194,149,0.12); border: 1px solid rgba(44,194,149,0.25);
+      color: var(--accent);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    }
+    .deliverable-icon svg { width: 24px; height: 24px; }
+    .deliverable-title { font-size: 1.05rem; color: var(--blue-light); margin-bottom: 10px; }
+    /* MORE WORK */
+    .more-work-section { padding: 80px 0; background: var(--blue-dark); }
+    .more-work-header { margin-bottom: 40px; }
+    .more-work-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .more-work-card {
+      border-radius: var(--radius-lg); overflow: hidden; position: relative; height: 200px;
+      text-decoration: none; display: block;
+    }
+    .more-work-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .more-work-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(1,21,48,0.92) 0%, rgba(1,21,48,0.25) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
+      transition: var(--transition);
+    }
+    .more-work-card:hover .more-work-overlay { background: linear-gradient(to top, rgba(1,21,48,0.97) 0%, rgba(1,21,48,0.4) 100%); }
+    .more-work-cat { font-size: 0.62rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.15em; color: var(--blue-mid); margin-bottom: 4px; }
+    .more-work-name { font-size: 1.1rem; font-weight: bold; color: #fff; font-family: 'Century Gothic', sans-serif; }
+    /* CTA */
+    .cta-section { padding: 100px 0; text-align: center; background: var(--blue-dark); }
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr 1fr; }
+      .more-work-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; gap: 8px;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(2,40,89,0.98); padding: 20px 24px;
+        border-bottom: 1px solid rgba(179,220,255,0.1);
+      }
+      .nav-links.open a { color: var(--blue-light) !important; padding: 10px 0; }
+      .footer-main { grid-template-columns: 1fr; }
+      .overview-grid { grid-template-columns: 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr; }
+      .more-work-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">
+          <img src="../brand_assets/fullLogo_fullColor.svg" alt="With An E Creative" />
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html" class="active">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="contact.html" class="btn nav-cta nav-cta-btn">
+              Let's Talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../brand_assets/nexiiHero.png" />
+        <img src="../brand_assets/nexiiPageHero.png" alt="" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="project-section">
+    <div class="container">
+      <div class="overview-grid reveal">
+        <div class="overview-text">
+          <div class="section-label">The Project</div>
+          <h2 class="section-title">Visualizing What Hasn't Been Built Yet</h2>
+          <p>Nexii is a construction company building the next generation of eco-friendly structures, but communicating complex architectural concepts to clients and stakeholders is a challenge all on its own.</p>
+          <p>We partnered with Nexii to create a suite of architectural visualizations that bring their projects to life before any ground is broken. Our renderings not only show how Nexii's buildings look in 3D space, but how they interact with the environment around them, day and night.</p>
+        </div>
+        <div>
+          <div class="project-info-card">
+            <div class="project-info-row">
+              <span class="project-info-label">Client</span>
+              <span class="project-info-value">Nexii</span>
+            </div>
+            <div class="project-info-row">
+              <span class="project-info-label">Service</span>
+              <span class="project-info-value">Architectural Visualization</span>
+            </div>
+            <div class="project-info-row">
+              <span class="project-info-label">Industry</span>
+              <span class="project-info-value">Construction</span>
+            </div>
+            <div class="project-info-row">
+              <span class="project-info-label">Deliverables</span>
+              <div class="project-tags-row">
+                <span class="project-tag-sm">3D Visualizations</span>
+                <span class="project-tag-sm">Concept Renderings</span>
+                <span class="project-tag-sm">Brand Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="project-section alt">
+    <div class="container">
+      <div class="deliverables-header reveal">
+        <div class="section-label">What We Delivered</div>
+        <h2 class="section-title">From Blueprint to Big Picture</h2>
+      </div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal">
+          <div class="deliverable-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="deliverable-title">Architectural Visualizations</h3>
+          <p>Detailed, photorealistic 3D renders of Nexii's building projects, showing exteriors, structural systems, and material finishes in a way that flat drawings simply can't communicate.</p>
+        </div>
+        <div class="deliverable-card reveal">
+          <div class="deliverable-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="9" cy="18" r="2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="deliverable-title">Concept Videos</h3>
+          <p>High-fidelity views of Nexii's projects animated to show every layer being assembled, and showing a complete day-night cycle of the structure. We provided in-context visualizations showing not only Nexii's buildings, but how they fit into the community.</p>
+        </div>
+        <div class="deliverable-card reveal">
+          <div class="deliverable-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="deliverable-title">Brand Support</h3>
+          <p>Polished, on-brand slideshows, documents, and videos giving Nexii a ready-to-go brand toolkit for client meetings, investor conversations, and project proposals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE WORK -->
+  <section class="more-work-section">
+    <div class="container">
+      <div class="more-work-header reveal">
+        <div class="section-label">More Work</div>
+        <h2 class="section-title">Other Projects</h2>
+      </div>
+      <div class="more-work-grid reveal">
+        <a href="bowdark.html" class="more-work-card">
+          <img src="../brand_assets/bowdarkPageHero.png" alt="Bowdark Consulting" />
+          <div class="more-work-overlay">
+            <div class="more-work-cat">Brand Strategy</div>
+            <div class="more-work-name">Bowdark Consulting</div>
+          </div>
+        </a>
+        <a href="zach.html" class="more-work-card">
+          <img src="../brand_assets/zachPageHero.png" alt="Zach Theater" />
+          <div class="more-work-overlay">
+            <div class="more-work-cat">Content Production</div>
+            <div class="more-work-name">Zach Theater</div>
+          </div>
+        </a>
+        <a href="chandler.html" class="more-work-card">
+          <img src="../brand_assets/chandlerPageHero.png" alt="Chandler Studios" />
+          <div class="more-work-overlay">
+            <div class="more-work-cat">Web Design &amp; Development</div>
+            <div class="more-work-name">Chandler Studios</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="container">
+      <div class="section-label" style="justify-content:center;">Start Here</div>
+      <h2 class="section-title" style="text-align:center;">Ready to Build Something?</h2>
+      <p style="text-align:center;max-width:480px;margin:0 auto 40px;">Let's talk about your brand and where it could go. We'd love to be your creative partner.</p>
+      <div style="display:flex;justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">
+          Get in Touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="../brand_assets/fullLogo_fullColor.png" alt="With An E Creative" />
+          <p class="footer-tagline">A boutique digital marketing studio crafting bold brands and campaigns that get results.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/withane_creative/" class="footer-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/with-an-e-creative/" class="footer-social" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2s1-2 4-2 4 2 4 5v7h-4v-6c0-1-.5-2-2-2s-2 1-2 2v6h-4z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@WithAnECreative" class="footer-social" aria-label="Youtube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Brand Strategy</a></li>
+            <li><a href="services.html">Social Media</a></li>
+            <li><a href="services.html">Content Creation</a></li>
+            <li><a href="services.html">Paid Advertising</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">Our Work</a></li>
+            <li><a href="../index.html#process">Our Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Get In Touch</div>
+          <ul class="footer-links">
+            <li><a href="mailto:inquiries@withanecreative.com">inquiries@withanecreative.com</a></li>
+          </ul>
+          <div style="margin-top:28px">
+            <div class="footer-col-title">Ready to Start?</div>
+            <a href="mailto:inquiries@withanecreative.com" class="btn btn-primary" style="font-size:0.68rem;padding:12px 24px;margin-top:12px">
+              Let's Talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 With An E Creative. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
