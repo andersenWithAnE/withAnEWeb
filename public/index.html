@@ -442,6 +442,87 @@
     }
 
     /* =====================
+       PLANS
+    ===================== */
+    .plans { padding: 120px 0; background: var(--blue-navy); }
+    .plans-head { text-align: center; margin-bottom: 72px; }
+    .plans-head .section-subtitle { margin: 0 auto; }
+    .plans-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;
+    }
+    .plan-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(179,220,255,0.1);
+      border-radius: 24px;
+      padding: 40px 36px;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .plan-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(179,220,255,0.2);
+      transform: translateY(-4px);
+    }
+    .plan-name {
+      font-size: 1.8rem; color: var(--blue-light); margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .plan-target {
+      font-size: 0.9rem; margin-bottom: 20px;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .plan-features {
+      list-style: none; text-align: left;
+    }
+    .plan-features li {
+      margin-bottom: 12px; color: var(--text-mid);
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .plan-features li::before {
+      content: '✓'; font-weight: bold; flex-shrink: 0;
+    }
+
+    /* Plan-specific accent colors */
+    .plan-card-starter {
+      border-color: rgba(253,191,60,0.2);
+    }
+    .plan-card-starter .plan-target {
+      color: var(--gold);
+    }
+    .plan-card-starter .plan-features li::before {
+      color: var(--gold);
+    }
+    .plan-card-starter:hover {
+      border-color: rgba(253,191,60,0.4);
+    }
+
+    .plan-card-growth {
+      border-color: rgba(44,194,149,0.2);
+    }
+    .plan-card-growth .plan-target {
+      color: #2cc295;
+    }
+    .plan-card-growth .plan-features li::before {
+      color: #2cc295;
+    }
+    .plan-card-growth:hover {
+      border-color: rgba(44,194,149,0.4);
+    }
+
+    .plan-card-embedded {
+      border-color: rgba(252,28,109,0.2);
+    }
+    .plan-card-embedded .plan-target {
+      color: var(--pink);
+    }
+    .plan-card-embedded .plan-features li::before {
+      color: var(--pink);
+    }
+    .plan-card-embedded:hover {
+      border-color: rgba(252,28,109,0.4);
+    }
+
+    /* =====================
        WORK
     ===================== */
     .work { padding: 120px 0; background: var(--blue-navy); }
@@ -462,7 +543,7 @@
     }
     .work-thumb-w1 { background: url('brand_assets/bowdarkHero.png') center/cover no-repeat; }
     .work-thumb-w2 { background: url('brand_assets/zachHero.png') center/cover no-repeat; }
-    .work-thumb-w3 { background: url('brand_assets/chandlerHero.png') center/cover no-repeat; }
+    .work-thumb-w3 { background: url('brand_assets/nexiiHero.png') center/cover no-repeat; }
     .work-thumb-w4 { background: linear-gradient(135deg, #1c0800 0%, #f85a24 100%); }
     .work-thumb-w5 { background: linear-gradient(135deg, #1c1400 0%, #fdbf3c 100%); }
     .work-thumb-w6 { background: linear-gradient(135deg, #001c2e 0%, #3e85f8 100%); }
@@ -867,7 +948,7 @@
       <div class="services-head reveal">
         <div class="section-label">What We Do</div>
         <h2 class="section-title">Services Built for<br/>Modern Brands</h2>
-        <p class="section-subtitle">From strategy to execution, we offer everything your brand needs to thrive in the digital landscape.</p>
+        <p class="section-subtitle">Most growing businesses run into the same problem: marketing becomes inconsistent and disconnected from the quality of the business itself. With An E solves this problem by being an embedded marketing partner, not just another vendor. You get the full power of design and analytics teams all in one place.</p>
       </div>
       <div class="services-grid">
         <div class="service-card c-blue reveal">
@@ -1015,6 +1096,48 @@
     </div>
   </section>
 
+  <!-- ==================== PLANS ==================== -->
+  <section class="plans" id="plans">
+    <div class="container">
+      <div class="plans-head reveal">
+        <div class="section-label">Our Services</div>
+        <h2 class="section-title">Marketing Packages</h2>
+        <p class="section-subtitle">Tailored marketing solutions for businesses of all sizes.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card plan-card-starter reveal">
+          <h3 class="plan-name">Starter</h3>
+          <div class="plan-target">For Small Businesses</div>
+          <ul class="plan-features">
+            <li>Social content creation</li>
+            <li>Updated branding and design</li>
+            <li>Strategic guidance</li>
+          </ul>
+        </div>
+        <div class="plan-card plan-card-growth reveal">
+          <h3 class="plan-name">Growth</h3>
+          <div class="plan-target">For Growing Companies</div>
+          <ul class="plan-features">
+            <li>Comprehensive marketing strategy</li>
+            <li>Social content creation</li>
+            <li>New branding development</li>
+            <li>Website redesign</li>
+          </ul>
+        </div>
+        <div class="plan-card plan-card-embedded reveal">
+          <h3 class="plan-name">Embedded</h3>
+          <div class="plan-target">Full Partnership</div>
+          <ul class="plan-features">
+            <li>Dedicated marketing partner</li>
+            <li>Always available support</li>
+            <li>Complete marketing ecosystem</li>
+            <li>Custom solutions on demand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== WORK ==================== -->
   <section class="work" id="work">
     <div class="container">
@@ -1061,13 +1184,13 @@
         <div class="work-card reveal">
           <div class="work-thumb work-thumb-w3">
             
-            <span class="work-thumb-tag">Web Design</span>
+            <span class="work-thumb-tag">3D Visualization</span>
           </div>
           <div class="work-info">
-            <div class="work-cat">Web Design & Development</div>
-            <h3 class="work-title">Chandler Studios Website</h3>
-            <p class="work-desc">Creative studio website showcasing high-end collectibles and multimedia projects.</p>
-            <a href="pages/chandler.html" class="work-link">
+            <div class="work-cat">Architectural Rendering</div>
+            <h3 class="work-title">Nexii Architectural Visualizations</h3>
+            <p class="work-desc">Photorealistic 3D renders and animations bringing eco-friendly construction projects to life.</p>
+            <a href="pages/nexii.html" class="work-link">
               View case study
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
