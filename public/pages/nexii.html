@@ -187,6 +187,15 @@
     }
     .deliverable-icon svg { width: 24px; height: 24px; }
     .deliverable-title { font-size: 1.05rem; color: var(--blue-light); margin-bottom: 10px; }
+    /* VIDEO SHOWCASE */
+    .video-showcase-header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+    .video-showcase-header .section-label { justify-content: center; }
+    .video-frame {
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
+      border: 1px solid rgba(179,220,255,0.12);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(62,133,248,0.06);
+    }
+    .video-frame video { display: block; width: 100%; height: auto; background: var(--blue-dark); }
     /* MORE WORK */
     .more-work-section { padding: 80px 0; background: var(--blue-dark); }
     .more-work-header { margin-bottom: 40px; }
@@ -343,6 +352,22 @@
           <h3 class="deliverable-title">Brand Support</h3>
           <p>Polished, on-brand slideshows, documents, and videos giving Nexii a ready-to-go brand toolkit for client meetings, investor conversations, and project proposals.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SHOWCASE -->
+  <section class="project-section">
+    <div class="container">
+      <div class="video-showcase-header reveal">
+        <div class="section-label">The Story</div>
+        <h2 class="section-title">Efficient, Eco-Friendly Data Center Builds</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">With An E produced the footage using Nexii b-roll, and we built the motion graphics and editorial treatment to showcase how Nexii can deliver faster, smarter, more sustainable data centers.</p>
+      </div>
+      <div class="video-frame reveal">
+        <video controls playsinline preload="metadata" poster="../brand_assets/nexiiPageHero.webp">
+          <source src="../brand_assets/nexii_dcVideo.webm" type="video/webm" />
+        </video>
       </div>
     </div>
   </section>
