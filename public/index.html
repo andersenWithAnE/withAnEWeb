@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1QBGWQKTR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P1QBGWQKTR');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="./brand_assets/isoE_lightBlue.svg">
@@ -824,7 +835,7 @@
       font-size: 0.8rem; color: rgba(179,220,255,0.25);
       text-decoration: none; transition: var(--transition);
     }
-    .footer-legal a:hover { color: var(--blue-light); }
+    .footer-legal a:hover, .footer-legal a:focus-visible { color: var(--blue-light); }
 
     /* =====================
        SCROLL REVEAL
@@ -1432,12 +1443,10 @@
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 With An E Creative. All rights reserved.</p>
-        <!--
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="pages/privacy.html">Privacy Policy</a>
+          <!--<a href="#">Terms of Service</a>-->
         </div>
-      -->
       </div>
     </div>
   </footer>

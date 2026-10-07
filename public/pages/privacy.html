@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1QBGWQKTR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P1QBGWQKTR');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../brand_assets/isoE_lightBlue.svg">
+
+  <meta name="description" content="How With An E Creative collects, uses, and protects information from visitors to withanecreative.com." />
+  <meta property="og:title" content="Privacy Policy | With An E Creative" />
+  <meta property="og:description" content="How With An E Creative collects, uses, and protects information from visitors to withanecreative.com." />
+  <meta property="og:image" content="https://withanecreative.com/brand_assets/isoE_lightBlue.svg/">
+  <meta property="og:url" content="https://withanecreative.com/pages/privacy.html" />
+  <meta property="og:type" content="website" />
+  <title>Privacy Policy | With An E Creative</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    body {
+      font-family: 'Century Gothic', 'Gill Sans', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      background: #022859;
+      color: rgba(179,220,255,0.82);
+      overflow-x: hidden;
+    }
+    :root {
+      --blue-light: #b3dcff;
+      --blue-mid: #3e85f8;
+      --blue-navy: #022859;
+      --blue-dark: #011530;
+      --off-white: #031e42;
+      --purple: #813ae5;
+      --pink: #fc1c6d;
+      --orange: #f85a24;
+      --gold: #fdbf3c;
+      --text-mid: rgba(179,220,255,0.78);
+      --text-light: rgba(179,220,255,0.45);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+    }
+    p { font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif; line-height: 1.75; color: var(--text-mid); }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.7rem; letter-spacing: 0.22em;
+      color: var(--blue-mid); margin-bottom: 16px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; display: block; width: 24px; height: 2px; background: var(--blue-mid);
+    }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--blue-light); margin-bottom: 20px; }
+    .section-subtitle { font-size: 1rem; color: var(--text-mid); max-width: 560px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.78rem; letter-spacing: 0.12em;
+      padding: 14px 32px; border-radius: 50px; border: none; cursor: pointer;
+      text-decoration: none; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-primary { background: var(--blue-mid); color: var(--blue-light); box-shadow: 0 4px 20px rgba(62,133,248,0.35); }
+    .btn-primary:hover { background: #2a72e8; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(62,133,248,0.45); }
+    .btn-outline { background: transparent; color: var(--blue-mid); border: 2px solid var(--blue-mid); }
+    .btn-outline:hover { background: var(--blue-mid); color: var(--blue-light); transform: translateY(-2px); }
+    .btn svg { width: 18px; height: 18px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--blue-mid); outline-offset: 3px; border-radius: 4px; }
+    /* NAVBAR */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0; transition: var(--transition);
+      background: rgba(2,40,89,0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .navbar.scrolled { padding: 12px 0; }
+    .navbar-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 44px; width: auto; transition: var(--transition); }
+    .navbar.scrolled .nav-logo img { height: 36px; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.72rem; letter-spacing: 0.14em;
+      color: var(--blue-light); text-decoration: none;
+      transition: var(--transition); opacity: 0.8;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--blue-mid) !important; }
+    .nav-links a.active { opacity: 1; color: var(--blue-mid); }
+    .nav-cta { font-size: 0.7rem !important; padding: 10px 24px !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--blue-light); border-radius: 2px; }
+    /* FOOTER */
+    .footer { background: var(--blue-dark); padding: 72px 0 32px; }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand img { height: 48px; margin-bottom: 20px; }
+    .footer-tagline { font-size: 0.85rem; color: rgba(179,220,255,0.45); line-height: 1.75; margin-bottom: 28px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(179,220,255,0.07); border: 1px solid rgba(179,220,255,0.1);
+      font-size: 0.9rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition);
+    }
+    .footer-social:hover { background: var(--blue-mid); color: var(--blue-light); border-color: var(--blue-mid); }
+    .footer-col-title {
+      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+      font-weight: bold; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.18em; color: var(--blue-light); margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.85rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--blue-light); }
+    .footer-bottom { border-top: 1px solid rgba(179,220,255,0.07); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.8rem; color: rgba(179,220,255,0.25); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 0.8rem; color: rgba(179,220,255,0.25); text-decoration: none; transition: var(--transition); }
+    .footer-legal a:hover, .footer-legal a[aria-current="page"] { color: var(--blue-light); }
+    /* PAGE HERO */
+    .page-hero {
+      padding: 160px 0 80px;
+      background: var(--blue-navy);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(179,220,255,0.08) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black 40%, transparent 100%);
+    }
+    .page-hero-content { position: relative; z-index: 1; }
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .footer-main { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; gap: 8px;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(2,40,89,0.98); padding: 20px 24px;
+        border-bottom: 1px solid rgba(179,220,255,0.1);
+      }
+      .nav-links.open a { color: var(--blue-light) !important; padding: 10px 0; }
+      .footer-main { grid-template-columns: 1fr; }
+    }
+
+    /* PAGE-SPECIFIC: PRIVACY */
+    .policy-updated {
+      display: inline-block; margin-top: 8px;
+      font-size: 0.65rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--text-light);
+    }
+    .policy-section {
+      padding: 80px 0 100px;
+      background: var(--off-white);
+    }
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    /* Table of contents */
+    .policy-toc {
+      position: sticky; top: 110px;
+      background: rgba(179,220,255,0.04);
+      border: 1px solid rgba(179,220,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+    }
+    .policy-toc-title {
+      font-size: 0.65rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--blue-mid); margin-bottom: 16px;
+    }
+    .policy-toc ol { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: toc; }
+    .policy-toc li { counter-increment: toc; display: flex; gap: 10px; font-size: 0.82rem; line-height: 1.4; }
+    .policy-toc li::before { content: counter(toc, decimal-leading-zero); color: rgba(179,220,255,0.25); font-size: 0.72rem; padding-top: 2px; }
+    .policy-toc a { color: var(--text-light); text-decoration: none; transition: color var(--transition); }
+    .policy-toc a:hover, .policy-toc a.current { color: var(--blue-light); }
+
+    /* Body copy */
+    .policy-body { max-width: 760px; min-width: 0; }
+    .policy-body section { padding-bottom: 48px; margin-bottom: 48px; border-bottom: 1px solid rgba(179,220,255,0.07); }
+    .policy-body section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .policy-body h2 { font-size: 1.5rem; color: var(--blue-light); margin-bottom: 20px; }
+    .policy-body h3 { font-size: 1rem; color: var(--blue-light); margin: 28px 0 10px; }
+    .policy-body p { font-size: 0.95rem; margin-bottom: 16px; }
+    .policy-body p:last-child { margin-bottom: 0; }
+    .policy-body ul { margin: 0 0 16px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .policy-body ul li {
+      position: relative; padding-left: 22px;
+      font-size: 0.95rem; line-height: 1.75; color: var(--text-mid);
+    }
+    .policy-body ul li::before {
+      content: ''; position: absolute; left: 0; top: 0.72em;
+      width: 8px; height: 2px; background: var(--blue-mid);
+    }
+    .policy-body strong { color: var(--blue-light); }
+    .policy-body a { color: var(--blue-mid); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color var(--transition); }
+    .policy-body a:hover { color: var(--blue-light); }
+
+    .policy-callout {
+      background: rgba(62,133,248,0.08);
+      border: 1px solid rgba(62,133,248,0.22);
+      border-radius: var(--radius-md);
+      padding: 24px 28px; margin: 24px 0;
+    }
+    .policy-callout p { margin-bottom: 0; }
+
+    /* Cookie table */
+    .table-wrap { overflow-x: auto; margin: 20px 0 16px; border: 1px solid rgba(179,220,255,0.08); border-radius: var(--radius-sm); }
+    .policy-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 560px; }
+    .policy-table th {
+      text-align: left; padding: 14px 16px;
+      font-size: 0.62rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.16em;
+      color: var(--blue-mid); background: rgba(179,220,255,0.04);
+      border-bottom: 1px solid rgba(179,220,255,0.08);
+    }
+    .policy-table td { padding: 14px 16px; color: var(--text-mid); line-height: 1.6; vertical-align: top; border-bottom: 1px solid rgba(179,220,255,0.06); }
+    .policy-table tr:last-child td { border-bottom: none; }
+    .policy-table code { font-family: Consolas, 'Courier New', monospace; font-size: 0.82rem; color: var(--blue-light); white-space: nowrap; }
+
+    .policy-contact {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px;
+      margin-top: 24px;
+    }
+    .policy-body .policy-contact a.btn { color: var(--blue-light); text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .policy-grid { grid-template-columns: 1fr; gap: 48px; }
+      .policy-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">
+          <img src="../brand_assets/fullLogo_fullColor.webp" alt="With An E Creative" />
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-primary nav-cta">
+              Let's Talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content reveal">
+        <div class="section-label">Legal</div>
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="section-subtitle">What information we collect when you visit our site, why we collect it, and the choices you have.</p>
+        <span class="policy-updated">Last updated: October 7, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICY -->
+  <section class="policy-section">
+    <div class="container">
+      <div class="policy-grid">
+
+        <aside class="policy-toc" aria-label="Table of contents">
+          <div class="policy-toc-title">On This Page</div>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#information-we-collect">Information We Collect</a></li>
+            <li><a href="#cookies">Cookies &amp; Analytics</a></li>
+            <li><a href="#how-we-use">How We Use Information</a></li>
+            <li><a href="#legal-bases">Legal Bases</a></li>
+            <li><a href="#sharing">How We Share Information</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#your-choices">Your Choices</a></li>
+            <li><a href="#your-rights">Your Privacy Rights</a></li>
+            <li><a href="#transfers">International Transfers</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#third-party-links">Third-Party Links</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ol>
+        </aside>
+
+        <div class="policy-body">
+
+          <section id="overview">
+            <h2>1. Overview</h2>
+            <p>With An E Creative ("With An E," "we," "us," or "our") is a digital marketing studio. This Privacy Policy explains how we collect, use, share, and protect information about you when you visit <a href="https://withanecreative.com/">withanecreative.com</a> (the "Site"), contact us, or otherwise interact with us online.</p>
+            <p>By using the Site, you acknowledge the practices described in this policy. If you do not agree with them, please do not use the Site.</p>
+            <div class="policy-callout">
+              <p><strong>The short version:</strong> We use Google Analytics and HubSpot to understand how people find and use our Site, and we use the details you send through our contact form only to reply to you and talk about working together. We do not sell your personal information.</p>
+            </div>
+          </section>
+
+          <section id="information-we-collect">
+            <h2>2. Information We Collect</h2>
+
+            <h3>Information you give us</h3>
+            <p>When you fill out our contact form or email us, we collect the information you choose to provide, which may include:</p>
+            <ul>
+              <li>Your first and last name</li>
+              <li>Your email address</li>
+              <li>Your company or brand name</li>
+              <li>The service you are interested in</li>
+              <li>The content of your message, including any project, timeline, or budget details you share</li>
+            </ul>
+
+            <h3>Information collected automatically</h3>
+            <p>When you visit the Site, we and our service providers automatically collect certain information about your device and how you use the Site, including:</p>
+            <ul>
+              <li><strong>Device and browser information</strong> such as browser type and version, operating system, device type, screen resolution, and language preference.</li>
+              <li><strong>Usage information</strong> such as the pages you view, how long you spend on them, the links you click, the referring website or search term that brought you here, and the date and time of your visit.</li>
+              <li><strong>Approximate location</strong> (such as country, region, or city) derived from your IP address.</li>
+              <li><strong>Identifiers</strong> such as your IP address and cookie or other online identifiers.</li>
+            </ul>
+            <p>This information is collected using cookies and similar technologies, described in the next section, and through the standard server logs kept by our hosting provider.</p>
+
+            <h3>Information we do not collect</h3>
+            <p>We do not ask for or knowingly collect sensitive personal information, such as government ID numbers, financial account details, health information, or precise geolocation, through the Site. Please do not send this kind of information through our contact form.</p>
+          </section>
+
+          <section id="cookies">
+            <h2>3. Cookies &amp; Analytics</h2>
+            <p>Cookies are small text files stored on your device when you visit a website. We use cookies and similar technologies for analytics and to understand how visitors interact with the Site.</p>
+
+            <h3>Google Analytics</h3>
+            <p>We use Google Analytics, a web analytics service provided by Google LLC ("Google"), to measure traffic and understand how visitors use the Site. Google Analytics uses cookies to collect information such as how often you visit, which pages you view, and what site referred you. Google uses this information to provide us with aggregated reports about Site activity.</p>
+            <p>Google Analytics does not log or store individual IP addresses. Information collected by Google Analytics is processed by Google in accordance with its own privacy policy. You can learn more in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+            <h3>HubSpot</h3>
+            <p>We use HubSpot, Inc. ("HubSpot") to understand visitor activity on the Site and to manage our relationships with prospective and current clients. HubSpot's tracking code sets cookies that record visits and page views. If you contact us, HubSpot may associate your past and future browsing activity on the Site with the contact details you provided. See the <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener">HubSpot Privacy Policy</a> for more information.</p>
+
+            <h3>Cookies used on this Site</h3>
+            <div class="table-wrap">
+              <table class="policy-table">
+                <thead>
+                  <tr><th>Cookie</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>_ga</code></td><td>Google Analytics</td><td>Distinguishes unique visitors.</td><td>2 years</td></tr>
+                  <tr><td><code>_ga_&lt;ID&gt;</code></td><td>Google Analytics</td><td>Keeps track of the current session.</td><td>2 years</td></tr>
+                  <tr><td><code>__hstc</code></td><td>HubSpot</td><td>Tracks visitors across sessions (first and latest visit, number of sessions).</td><td>6 months</td></tr>
+                  <tr><td><code>hubspotutk</code></td><td>HubSpot</td><td>Keeps track of a visitor's identity and is passed to HubSpot when a form is submitted.</td><td>6 months</td></tr>
+                  <tr><td><code>__hssc</code></td><td>HubSpot</td><td>Keeps track of sessions and page views within a session.</td><td>30 minutes</td></tr>
+                  <tr><td><code>__hssrc</code></td><td>HubSpot</td><td>Determines whether the visitor has restarted their browser.</td><td>Session</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Our providers may update the names or durations of their cookies from time to time. You can find out how to manage or block cookies in <a href="#your-choices">Your Choices</a>.</p>
+          </section>
+
+          <section id="how-we-use">
+            <h2>4. How We Use Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+              <li>Respond to your inquiries and communicate with you about our services, proposals, and projects.</li>
+              <li>Operate, maintain, and improve the Site, including understanding which content and pages are most useful.</li>
+              <li>Measure and analyze traffic, audience trends, and the performance of our marketing.</li>
+              <li>Manage our relationships with prospective and current clients.</li>
+              <li>Detect, prevent, and respond to spam, fraud, abuse, and security issues.</li>
+              <li>Comply with legal obligations and enforce our rights.</li>
+            </ul>
+            <p>We do not use the information collected through the Site to make automated decisions that have legal or similarly significant effects on you.</p>
+          </section>
+
+          <section id="legal-bases">
+            <h2>5. Legal Bases for Processing</h2>
+            <p>If you are in the European Economic Area, the United Kingdom, or Switzerland, we rely on the following legal bases to process your personal data:</p>
+            <ul>
+              <li><strong>Consent</strong> — for non-essential cookies and analytics, where required by law. You may withdraw consent at any time.</li>
+              <li><strong>Legitimate interests</strong> — to respond to business inquiries, understand and improve the Site, and keep it secure, where those interests are not overridden by your rights.</li>
+              <li><strong>Contract</strong> — to take steps at your request before entering into an agreement with us.</li>
+              <li><strong>Legal obligation</strong> — where we need to process data to comply with the law.</li>
+            </ul>
+          </section>
+
+          <section id="sharing">
+            <h2>6. How We Share Information</h2>
+            <p><strong>We do not sell your personal information</strong>, and we do not share it with third parties for their own marketing purposes. We share information only in the following situations:</p>
+            <ul>
+              <li><strong>Service providers.</strong> We work with trusted vendors who process information on our behalf to run the Site and our business, including Google (Google Analytics and Firebase Hosting), HubSpot (visitor analytics and contact management), and Formspree (delivering contact form submissions to us). These providers may use information only as needed to provide their services to us.</li>
+              <li><strong>Legal requirements.</strong> We may disclose information if required to by law, subpoena, or other legal process, or if we believe in good faith that disclosure is necessary to protect our rights, your safety, or the safety of others.</li>
+              <li><strong>Business transfers.</strong> If we are involved in a merger, acquisition, or sale of assets, information may be transferred as part of that transaction.</li>
+              <li><strong>With your consent.</strong> We may share information for any other purpose with your permission.</li>
+            </ul>
+          </section>
+
+          <section id="retention">
+            <h2>7. Data Retention</h2>
+            <p>We keep personal information only for as long as we need it for the purposes described in this policy, unless the law requires or permits us to keep it longer.</p>
+            <ul>
+              <li><strong>Contact form submissions and emails</strong> are kept for as long as needed to respond to you and manage any business relationship that follows, and then deleted or anonymized.</li>
+              <li><strong>Google Analytics data</strong> tied to cookies or user identifiers is kept for no longer than 14 months, after which it is automatically deleted. Aggregated reports that do not identify you may be kept longer.</li>
+              <li><strong>HubSpot contact and activity records</strong> are kept for as long as we have an active or potential business relationship with you, or until you ask us to delete them.</li>
+            </ul>
+          </section>
+
+          <section id="your-choices">
+            <h2>8. Your Choices</h2>
+            <h3>Cookie controls</h3>
+            <p>Most browsers let you block or delete cookies through their settings. If you block cookies, some features of the Site may not work as expected, but you will still be able to browse it.</p>
+            <h3>Opting out of Google Analytics</h3>
+            <p>You can stop Google Analytics from collecting data about your visits by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>. You can also manage how Google uses your information through your <a href="https://myadcenter.google.com/" target="_blank" rel="noopener">Google ad settings</a>.</p>
+            <h3>Global Privacy Control</h3>
+            <p>Where required by law, we treat a <a href="https://globalprivacycontrol.org/" target="_blank" rel="noopener">Global Privacy Control</a> (GPC) signal from your browser as a valid request to opt out of the sale or sharing of your personal information.</p>
+            <h3>Email</h3>
+            <p>If we send you emails, you can opt out of marketing messages at any time by using the unsubscribe link in the message or by emailing us. We may still send you messages related to an inquiry or an ongoing project.</p>
+          </section>
+
+          <section id="your-rights">
+            <h2>9. Your Privacy Rights</h2>
+            <p>Depending on where you live, you may have some or all of the following rights regarding your personal information:</p>
+            <ul>
+              <li><strong>Access</strong> — to know what personal information we hold about you and to receive a copy of it.</li>
+              <li><strong>Correction</strong> — to ask us to correct inaccurate information.</li>
+              <li><strong>Deletion</strong> — to ask us to delete your personal information.</li>
+              <li><strong>Portability</strong> — to receive your information in a portable format.</li>
+              <li><strong>Restriction and objection</strong> — to ask us to limit, or object to, certain processing.</li>
+              <li><strong>Opt out</strong> — to opt out of the sale or sharing of personal information or its use for targeted advertising. We do not sell personal information.</li>
+              <li><strong>Withdraw consent</strong> — where we rely on your consent, to withdraw it at any time.</li>
+            </ul>
+
+            <h3>U.S. state privacy rights</h3>
+            <p>Residents of California and other states with comprehensive privacy laws (such as Colorado, Connecticut, Virginia, Texas, and Oregon) may have the rights listed above. In the past 12 months we have collected the categories of information described in <a href="#information-we-collect">Information We Collect</a>: identifiers, internet or network activity, approximate geolocation, and professional or commercial information you choose to share. We collect this information from you and your device for the purposes described in <a href="#how-we-use">How We Use Information</a>, and we disclose it only to the service providers listed in <a href="#sharing">How We Share Information</a>. We will not discriminate against you for exercising any of your rights.</p>
+
+            <h3>EEA, UK &amp; Swiss rights</h3>
+            <p>If you are in the European Economic Area, the United Kingdom, or Switzerland, you also have the right to lodge a complaint with your local data protection authority.</p>
+
+            <h3>How to make a request</h3>
+            <p>To exercise any of these rights, email us at <a href="mailto:inquiries@withanecreative.com">inquiries@withanecreative.com</a>. We will need to verify your identity before responding, and we will reply within the time required by applicable law. You may use an authorized agent to make a request on your behalf, and we may ask for proof of that authorization. If we deny your request, you may appeal by replying to our decision.</p>
+          </section>
+
+          <section id="transfers">
+            <h2>10. International Data Transfers</h2>
+            <p>We are based in the United States, and our service providers may process information in the United States and other countries. These countries may have data protection laws that are different from the laws where you live. Where required, we rely on appropriate safeguards for these transfers, such as the European Commission's Standard Contractual Clauses or our providers' certification under the EU-U.S. Data Privacy Framework.</p>
+          </section>
+
+          <section id="security">
+            <h2>11. Security</h2>
+            <p>We use reasonable administrative, technical, and organizational measures to protect personal information, including serving the Site over encrypted HTTPS connections. However, no method of transmission over the internet or of electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+          </section>
+
+          <section id="children">
+            <h2>12. Children's Privacy</h2>
+            <p>The Site is intended for businesses and is not directed to children under 16. We do not knowingly collect personal information from children under 16. If you believe a child has given us personal information, please contact us and we will delete it.</p>
+          </section>
+
+          <section id="third-party-links">
+            <h2>13. Third-Party Links</h2>
+            <p>The Site contains links to third-party websites and platforms, such as Instagram, LinkedIn, and YouTube, as well as client websites featured in our work. We are not responsible for the privacy practices of these third parties, and we encourage you to read their privacy policies before sharing any information with them.</p>
+          </section>
+
+          <section id="changes">
+            <h2>14. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we do, we will update the "Last updated" date at the top of this page. If we make material changes, we will take reasonable steps to let you know. We encourage you to review this page periodically.</p>
+          </section>
+
+          <section id="contact">
+            <h2>15. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or how we handle your information, please get in touch:</p>
+            <p><strong>With An E Creative</strong><br />Dallas–Fort Worth, Texas<br />Email: <a href="mailto:inquiries@withanecreative.com">inquiries@withanecreative.com</a></p>
+            <div class="policy-contact">
+              <a href="mailto:inquiries@withanecreative.com" class="btn btn-primary">
+                Email Us
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="../brand_assets/fullLogo_fullColor.webp" alt="With An E Creative" />
+          <p class="footer-tagline">A boutique digital marketing studio crafting bold brands and campaigns that get results.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/withane_creative/" class="footer-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/with-an-e-creative/" class="footer-social" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2s1-2 4-2 4 2 4 5v7h-4v-6c0-1-.5-2-2-2s-2 1-2 2v6h-4z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@WithAnECreative" class="footer-social" aria-label="Youtube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Brand Strategy</a></li>
+            <li><a href="services.html">Social Media</a></li>
+            <li><a href="services.html">Content Creation</a></li>
+            <li><a href="services.html">Paid Advertising</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">Our Work</a></li>
+            <li><a href="../index.html#process">Our Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Get In Touch</div>
+          <ul class="footer-links">
+            <li><a href="mailto:inquiries@withanecreative.com">inquiries@withanecreative.com</a></li>
+          </ul>
+          <div style="margin-top:28px">
+            <div class="footer-col-title">Ready to Start?</div>
+            <a href="mailto:inquiries@withanecreative.com" class="btn btn-primary" style="font-size:0.68rem;padding:12px 24px;margin-top:12px">
+              Let's Talk
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 With An E Creative. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Highlight the current section in the table of contents
+    const tocLinks = document.querySelectorAll('.policy-toc a');
+    const sections = Array.from(document.querySelectorAll('.policy-body section'));
+    function updateToc() {
+      let current = sections[0];
+      sections.forEach(s => { if (s.getBoundingClientRect().top <= 160) current = s; });
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) current = sections[sections.length - 1];
+      tocLinks.forEach(a => a.classList.toggle('current', a.getAttribute('href') === '#' + current.id));
+    }
+    window.addEventListener('scroll', updateToc, { passive: true });
+    window.addEventListener('load', updateToc);
+    updateToc();
+  </script>
+
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/246305574.js"></script>
+  <!-- End of HubSpot Embed Code -->
+</body>
+</html>

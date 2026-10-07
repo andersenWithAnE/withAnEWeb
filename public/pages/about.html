@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1QBGWQKTR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P1QBGWQKTR');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="./brand_assets/isoE_lightBlue.svg">
@@ -118,8 +129,11 @@
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-links a { font-size: 0.85rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition); }
     .footer-links a:hover { color: var(--blue-light); }
-    .footer-bottom { border-top: 1px solid rgba(179,220,255,0.07); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom { border-top: 1px solid rgba(179,220,255,0.07); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-copy { font-size: 0.8rem; color: rgba(179,220,255,0.25); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 0.8rem; color: rgba(179,220,255,0.25); text-decoration: none; transition: var(--transition); }
+    .footer-legal a:hover, .footer-legal a:focus-visible { color: var(--blue-light); }
     /* PAGE HERO */
     .page-hero {
       position: relative; overflow: hidden;
@@ -662,6 +676,9 @@
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 With An E Creative. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </footer>
