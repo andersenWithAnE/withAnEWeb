@@ -22,118 +22,11 @@
   <meta property="og:url" content="https://withanecreative.com/" />
   <meta property="og:type" content="website" />
   <title>Contact | With An E Creative</title>
+  <link rel="stylesheet" href="../css/site.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Century Gothic', 'Gill Sans', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      background: #022859;
-      color: rgba(179,220,255,0.82);
-      overflow-x: hidden;
-    }
-    :root {
-      --blue-light: #b3dcff;
-      --blue-mid: #3e85f8;
-      --blue-navy: #022859;
-      --blue-dark: #011530;
-      --off-white: #031e42;
-      --purple: #813ae5;
-      --pink: #fc1c6d;
-      --orange: #f85a24;
-      --gold: #fdbf3c;
-      --text-mid: rgba(179,220,255,0.78);
-      --text-light: rgba(179,220,255,0.45);
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --radius-xl: 40px;
-      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    h1, h2, h3, h4, h5 {
-      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      font-weight: bold;
-      line-height: 1.15;
-      letter-spacing: 0.01em;
-    }
-    p { font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif; line-height: 1.75; color: var(--text-mid); }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      font-weight: bold; text-transform: uppercase;
-      font-size: 0.7rem; letter-spacing: 0.22em;
-      color: var(--blue-mid); margin-bottom: 16px;
-    }
-    .section-label::before, .section-label::after {
-      content: ''; display: block; width: 24px; height: 2px; background: var(--blue-mid);
-    }
-    .section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--blue-light); margin-bottom: 20px; }
-    .section-subtitle { font-size: 1rem; color: var(--text-mid); max-width: 560px; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      font-weight: bold; text-transform: uppercase;
-      font-size: 0.78rem; letter-spacing: 0.12em;
-      padding: 14px 32px; border-radius: 50px; border: none; cursor: pointer;
-      text-decoration: none; transition: var(--transition); white-space: nowrap;
-    }
-    .btn-primary { background: var(--blue-mid); color: var(--blue-light); box-shadow: 0 4px 20px rgba(62,133,248,0.35); }
-    .btn-primary:hover { background: #2a72e8; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(62,133,248,0.45); }
     .btn-outline { background: transparent; color: var(--blue-mid); border: 2px solid var(--blue-mid); }
     .btn-outline:hover { background: var(--blue-mid); color: var(--blue-light); transform: translateY(-2px); }
-    .btn svg { width: 18px; height: 18px; }
-    /* NAVBAR */
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 18px 0; transition: var(--transition);
-      background: rgba(2,40,89,0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .navbar.scrolled { padding: 12px 0; }
-    .navbar-inner { display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo img { height: 44px; width: auto; transition: var(--transition); }
-    .navbar.scrolled .nav-logo img { height: 36px; }
-    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a {
-      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      font-weight: bold; text-transform: uppercase;
-      font-size: 0.72rem; letter-spacing: 0.14em;
-      color: var(--blue-light); text-decoration: none;
-      transition: var(--transition); opacity: 0.8;
-    }
-    .nav-links a:hover { opacity: 1; color: var(--blue-mid) !important; }
-    .nav-links a.active { opacity: 1; color: var(--blue-mid); }
-    .nav-cta { font-size: 0.7rem !important; padding: 10px 24px !important; }
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--blue-light); border-radius: 2px; }
-    /* FOOTER */
-    .footer { background: var(--blue-dark); padding: 72px 0 32px; }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand img { height: 48px; margin-bottom: 20px; }
-    .footer-tagline { font-size: 0.85rem; color: rgba(179,220,255,0.45); line-height: 1.75; margin-bottom: 28px; }
-    .footer-socials { display: flex; gap: 10px; }
-    .footer-social {
-      width: 38px; height: 38px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(179,220,255,0.07); border: 1px solid rgba(179,220,255,0.1);
-      font-size: 0.9rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition);
-    }
-    .footer-social:hover { background: var(--blue-mid); color: var(--blue-light); border-color: var(--blue-mid); }
-    .footer-col-title {
-      font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
-      font-weight: bold; text-transform: uppercase;
-      font-size: 0.65rem; letter-spacing: 0.18em; color: var(--blue-light); margin-bottom: 20px;
-    }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a { font-size: 0.85rem; color: rgba(179,220,255,0.45); text-decoration: none; transition: var(--transition); }
-    .footer-links a:hover { color: var(--blue-light); }
-    .footer-bottom { border-top: 1px solid rgba(179,220,255,0.07); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-copy { font-size: 0.8rem; color: rgba(179,220,255,0.25); }
-    .footer-legal { display: flex; gap: 24px; }
-    .footer-legal a { font-size: 0.8rem; color: rgba(179,220,255,0.25); text-decoration: none; transition: var(--transition); }
-    .footer-legal a:hover, .footer-legal a:focus-visible { color: var(--blue-light); }
+    .footer-social { font-size: 0.9rem; }
     /* PAGE HERO */
     .page-hero {
       padding: 160px 0 80px;
@@ -147,39 +40,17 @@
       mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black 40%, transparent 100%);
     }
     .page-hero-content { position: relative; z-index: 1; }
-    /* REVEAL */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .footer-main { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .nav-links.open {
-        display: flex; flex-direction: column; gap: 8px;
-        position: absolute; top: 100%; left: 0; right: 0;
-        background: rgba(2,40,89,0.98); padding: 20px 24px;
-        border-bottom: 1px solid rgba(179,220,255,0.1);
-      }
-      .nav-links.open a { color: var(--blue-light) !important; padding: 10px 0; }
-      .footer-main { grid-template-columns: 1fr; }
-    }
-
     /* PAGE-SPECIFIC: CONTACT */
     .contact-section {
       padding: 80px 0 100px;
       background: var(--off-white);
     }
-
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.4fr;
       gap: 72px;
       align-items: start;
     }
-
     /* Info column */
     .contact-info-title {
       font-size: 1.5rem;
@@ -222,7 +93,6 @@
       font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
       margin-top: 2px;
     }
-
     .contact-socials-label {
       font-size: 0.65rem;
       font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
@@ -259,7 +129,6 @@
       color: var(--blue-light);
     }
     .contact-social-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-
     /* Form */
     .contact-form-card {
       background: rgba(255,255,255,0.05);
@@ -339,7 +208,6 @@
       box-shadow: 0 4px 20px rgba(22,163,74,0.3) !important;
       color: #fff !important;
     }
-
     @media (max-width: 900px) {
       .contact-grid { grid-template-columns: 1fr; gap: 52px; }
       .form-row { grid-template-columns: 1fr; }

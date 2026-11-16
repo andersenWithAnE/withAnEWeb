@@ -1,0 +1,143 @@
+/* =====================
+   Client case-study pages (pages/bowdark.html, chandler.html, ...)
+   Loaded after site.css. Each page sets its accent in its own :root:
+     --accent, --accent-rgb, --accent-hover, --accent-contrast, and optionally --more-work-cols.
+===================== */
+
+:root { --more-work-cols: 1fr 1fr 1fr; }
+
+/* PAGE HERO */
+.page-hero {
+  position: relative; overflow: hidden;
+  min-height: 520px; display: flex; align-items: center;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(1,21,48,0.38) 0%, rgba(2,40,89,0.62) 100%);
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  text-align: center; padding: 140px 0 80px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.page-hero-content .section-title { color: #fff; }
+.hero-service-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 20px; border-radius: 50px; margin-top: 16px;
+  background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.4);
+  font-size: 0.72rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--blue-light);
+}
+
+/* PROJECT SECTIONS */
+.project-section { padding: 100px 0; background: var(--blue-navy); }
+.project-section.alt { background: var(--off-white); }
+.overview-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+}
+.overview-text p + p { margin-top: 20px; }
+.overview-cta { margin-top: 32px; }
+.overview-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.overview-cta:active { transform: translateY(0); }
+.project-info-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(179,220,255,0.1);
+  border-radius: var(--radius-lg); padding: 40px;
+}
+.project-info-row {
+  padding: 16px 0; border-bottom: 1px solid rgba(179,220,255,0.08);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.project-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+.project-info-label {
+  font-size: 0.65rem; font-weight: bold; text-transform: uppercase;
+  letter-spacing: 0.18em; color: var(--accent);
+}
+.project-info-value { font-size: 0.95rem; color: var(--blue-light); }
+.project-tags-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.project-tag-sm {
+  padding: 4px 12px; border-radius: 50px;
+  background: rgba(var(--accent-rgb),0.1); border: 1px solid rgba(var(--accent-rgb),0.25);
+  font-size: 0.72rem; color: var(--blue-light);
+}
+
+/* DELIVERABLES */
+.deliverables-header { text-align: center; margin-bottom: 56px; }
+.deliverables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.deliverable-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(179,220,255,0.1);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: var(--transition);
+}
+.deliverable-card:hover { border-color: rgba(var(--accent-rgb),0.35); transform: translateY(-4px); }
+.deliverable-icon {
+  width: 52px; height: 52px; border-radius: var(--radius-md);
+  background: rgba(var(--accent-rgb),0.12); border: 1px solid rgba(var(--accent-rgb),0.25);
+  color: var(--accent);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.deliverable-icon svg { width: 24px; height: 24px; }
+.deliverable-title { font-size: 1.05rem; color: var(--blue-light); margin-bottom: 10px; }
+
+/* RESULTS */
+.results-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+.results-header .section-label { justify-content: center; }
+.results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.result-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(179,220,255,0.1);
+  border-radius: var(--radius-lg); padding: 40px 24px; text-align: center;
+  transition: var(--transition);
+}
+.result-card:hover { border-color: rgba(var(--accent-rgb),0.35); transform: translateY(-4px); }
+.result-value {
+  font-family: 'Century Gothic', 'Gill Sans MT', Calibri, Arial, sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: bold; line-height: 1;
+  color: var(--accent); margin-bottom: 14px;
+}
+.result-label {
+  font-size: 0.7rem; font-weight: bold; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--blue-light);
+}
+
+/* VIDEO SHOWCASE */
+.video-showcase-header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+.video-showcase-header .section-label { justify-content: center; }
+.video-frame {
+  position: relative; border-radius: var(--radius-xl); overflow: hidden;
+  border: 1px solid rgba(179,220,255,0.12);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(62,133,248,0.06);
+}
+.video-frame video { display: block; width: 100%; height: auto; background: var(--blue-dark); }
+
+/* MORE WORK */
+.more-work-section { padding: 80px 0; background: var(--blue-dark); }
+.more-work-header { margin-bottom: 40px; }
+.more-work-grid { display: grid; grid-template-columns: var(--more-work-cols); gap: 20px; }
+.more-work-card {
+  border-radius: var(--radius-lg); overflow: hidden; position: relative; height: 200px;
+  text-decoration: none; display: block;
+}
+.more-work-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.more-work-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(1,21,48,0.92) 0%, rgba(1,21,48,0.25) 100%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
+  transition: var(--transition);
+}
+.more-work-card:hover .more-work-overlay { background: linear-gradient(to top, rgba(1,21,48,0.97) 0%, rgba(1,21,48,0.4) 100%); }
+.more-work-cat { font-size: 0.62rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.15em; color: var(--blue-mid); margin-bottom: 4px; }
+.more-work-name { font-size: 1.1rem; font-weight: bold; color: #fff; font-family: 'Century Gothic', sans-serif; }
+
+/* CTA */
+.cta-section { padding: 100px 0; text-align: center; background: var(--blue-dark); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .deliverables-grid { grid-template-columns: 1fr 1fr; }
+  .results-grid { grid-template-columns: 1fr 1fr; }
+  .more-work-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: 1fr; }
+  .deliverables-grid { grid-template-columns: 1fr; }
+  .more-work-grid { grid-template-columns: 1fr; }
+}
